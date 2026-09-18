@@ -42,6 +42,7 @@ void testduplicateArray(){
     cout << "testduplicateArray passed" << endl;
     
 }
+
 void testsinglyArray(){
 
     int arr[1] = {5};
@@ -50,12 +51,40 @@ void testsinglyArray(){
     cout << "testsinglyArray passed" << endl;
     
 }
+
 void testemptyArray(){
 
     int arr[0] = {};
     bool result = isSorted(arr,0);
     assert(result==true);
     cout << "testemptyArray passed" << endl;
+    
+}
+
+void testdecendingArray(){
+
+    int arr[5] = {5,4,3,2,1};
+    bool result = isSorted(arr,5);
+    assert(result==true);
+    cout << "testdecendingArray passed" << endl;
+    
+}
+
+void testnegativeArray(){
+
+    int arr[5] = {-5,-4,-3,-2,-1};
+    bool result = isSorted(arr,5);
+    assert(result==true);
+    cout << "testnegativeArray passed" << endl;
+    
+}
+
+void testmixedArray(){
+
+    int arr[5] = {-5,6,-3,5,-1};
+    bool result = isSorted(arr,5);
+    assert(result==true);
+    cout << "testmixedArray passed" << endl;
     
 }
 
@@ -66,7 +95,10 @@ int main(){
    //testunSortedArray();
    //testduplicateArray();
    //testsinglyArray();
-   testemptyArray();
+   //testemptyArray();
+   //testdecendingArray();
+   //testnegativeArray();
+   testmixedArray();
 
     return 0;
 }
