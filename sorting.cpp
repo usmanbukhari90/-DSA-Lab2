@@ -91,13 +91,13 @@ void testmixedArray(){
 
 int main(){
 
-   //testSortedArray();
-   //testunSortedArray();
-   //testduplicateArray();
-   //testsinglyArray();
-   //testemptyArray();
-   //testdecendingArray();
-   //testnegativeArray();
+   testSortedArray();
+   testduplicateArray();
+   testsinglyArray();
+   testnegativeArray();
+   testemptyArray();
+   testunSortedArray();
+   testdecendingArray();
    testmixedArray();
 
     return 0;
