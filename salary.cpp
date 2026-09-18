@@ -3,25 +3,29 @@
 int main() {
 
      const int size = 3; 
-     int salArray[size];
+     int* salArray = new int[size];
+
 // Input salaries 
 for (int i = 0; i < size; i++) {
      cout << "Enter Salary for employee " << (i + 1) << ": "; 
-     cin >> salArray[i];
+     cin >> *(salArray+i);
 }
 
 // Apply increment formula
  for (int i = 0; i < size; i++) { 
-    salArray[i] = salArray[i] + salArray[i] / (i + 1);
+    *(salArray+i) = *(salArray+i) + *(salArray+i) / (i + 1);
 }
 
 // Display updated salaries
  cout << "\nUpdated Salaries: "; 
  for (int i = 0; i < size; i++) {
-     cout << salArray[i] << " ";
+     cout << *(salArray+i) << " ";
 }	
 
 cout << endl; 
+
+delete[] salArray;
+
 return 0;
 
 }
