@@ -18,17 +18,18 @@ bool isSorted(const int* arr,const int size){
     return true;
 }
 
+void testSortedArray(){
+
+    int arr[5] = {1, 2, 3, 4, 5};
+    bool result = isSorted(arr,5);
+    assert(result==true);
+    cout << "testSortedArray passed" << endl;
+    
+}
+
 int main(){
 
-    int n=5;
-    int array[n]  = {1,2,3,4,5};
-    if(isSorted(array,n)){
-        cout<<"true";
-    }
-    else{
-        cout<<"false";
-    }
-    
+   testSortedArray();
 
     return 0;
 }
