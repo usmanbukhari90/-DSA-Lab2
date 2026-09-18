@@ -26,10 +26,19 @@ void testSortedArray(){
     cout << "testSortedArray passed" << endl;
     
 }
+void testunSortedArray(){
+
+    int arr[5] = {1, 2, 6, 4, 2};
+    bool result = isSorted(arr,5);
+    assert(result==true);
+    cout << "testunSortedArray passed" << endl;
+    
+}
 
 int main(){
 
-   testSortedArray();
+   //testSortedArray();
+   testunSortedArray();
 
     return 0;
 }
